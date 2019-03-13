@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.BusquedaController">
+   <children>
+      <Label alignment="CENTER" layoutX="296.0" layoutY="8.0" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-background-radius: 35; -fx-border-radius: 33;" text="Simulación" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView layoutX="35.0" layoutY="80.0" prefHeight="164.0" prefWidth="726.0">
+        <columns>
+          <TableColumn prefWidth="186.3333282470703" text="ISBN" />
+          <TableColumn prefWidth="174.6666717529297" text="Nombre" />
+            <TableColumn prefWidth="189.0" text="Ejemplares" />
+            <TableColumn prefWidth="178.66668701171875" text="Ubicación" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="36.0" layoutY="50.0" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-background-radius: 35; -fx-border-radius: 33;" text="Catálogo" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView layoutX="36.0" layoutY="292.0" prefHeight="241.0" prefWidth="211.0">
+        <columns>
+          <TableColumn prefWidth="210.0" text="Clientes" />
+        </columns>
+      </TableView>
+      <TableView layoutX="431.0" layoutY="298.0" prefHeight="235.0" prefWidth="312.0">
+        <columns>
+          <TableColumn prefWidth="156.0" text="ISBN " />
+            <TableColumn prefWidth="155.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="36.0" layoutY="257.0" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-background-radius: 35; -fx-border-radius: 33;" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="432.0" layoutY="265.0" prefHeight="26.0" prefWidth="264.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-background-radius: 35; -fx-border-radius: 33;" text="Libro seleccionado por cliente" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
