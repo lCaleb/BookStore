@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.InicioController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="441.0" prefWidth="441.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="interfaz.InicioController">
+   <children>
+      <Label alignment="CENTER" layoutX="125.0" layoutY="28.0" prefHeight="17.0" prefWidth="202.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-border-radius: 35; -fx-background-radius: 33;" text="BookStore" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="146.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-border-radius: 35; -fx-background-radius: 33;" text="# CAJEROS" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numCajeros" layoutX="230.0" layoutY="146.0" prefHeight="26.0" prefWidth="188.0" promptText="Cajeros jornada" style="-fx-background-radius: 35;" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="215.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: grey; -fx-border-color: black; -fx-border-radius: 35; -fx-background-radius: 33;" text="# CLIENTES" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numClientes" layoutX="230.0" layoutY="215.0" prefHeight="26.0" prefWidth="188.0" promptText="Clientes Jornada" style="-fx-background-radius: 35;" />
+      <Button fx:id="botonInicio" layoutX="169.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" style="-fx-background-radius: 35;" text="Inicio">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
