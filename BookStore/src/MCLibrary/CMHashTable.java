@@ -7,7 +7,7 @@ import model.Book;
 
 
 @SuppressWarnings("unused")
-public class CTableHash<K, V> {
+public class CMHashTable<K, V> {
 
 	@SuppressWarnings("hiding")
 	public class Node<K, V> {
@@ -28,7 +28,7 @@ public class CTableHash<K, V> {
 	public static final Integer size = 1000;
 
 	@SuppressWarnings("unchecked")
-	public CTableHash() {
+	public CMHashTable() {
 		cList = new Node[size];
 
 	}
@@ -150,7 +150,7 @@ public class CTableHash<K, V> {
 	}
 	
 	
-	public boolean chainingFunction(K key, V value) {
+	public boolean addChainingFunction(K key, V value) {
 
 		int indice = fuctionHash(key);
 		Node<K,V> node= new Node<K, V>(key, value);
