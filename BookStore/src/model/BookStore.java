@@ -30,7 +30,7 @@ public class BookStore {
 		return locationList;	
 	}
 	
-	public void
+	
 	
 	public void addBook(Book book) {
 		catalog.addChainingFunction(book.getISBN(), book);
