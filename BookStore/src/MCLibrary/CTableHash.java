@@ -3,6 +3,8 @@ package MCLibrary;
 import java.util.Hashtable;
 import java.util.LinkedList;
 
+import model.Book;
+
 
 @SuppressWarnings("unused")
 public class CTableHash<K, V> {
@@ -23,7 +25,7 @@ public class CTableHash<K, V> {
 
 	private Node<K, V>[] cList;
 
-	public static final Integer size = 5;
+	public static final Integer size = 1000;
 
 	@SuppressWarnings("unchecked")
 	public CTableHash() {
@@ -119,13 +121,46 @@ public class CTableHash<K, V> {
 		return (V) current.value;
 	}
 
-	public boolean porEnCadenamiento(K key, V value) {
+	public Node<K, V> searchNode(K needed, Node<K, V> current){
+		if (!current.key.equals(needed)) {
+			return searchNode(needed, current.siguiente);
+		}
+		else {
+			return current;
+		}
+		
+	}
+	
+	public void addNode(Node<K, V> toAdd, Node<K, V> current) {
+		if (current.siguiente==null) {
+			current.siguiente= toAdd;
+		}else
+		{
+			addNode(toAdd, current.siguiente);
+		}
+	}
+	
+	public Node<K,V> chainingSearch(K key){
+		int indice = fuctionHash(key);
+		
+		Node<K,V> current= cList[indice];
+		
+		return searchNode(key, current);
+		
+	}
+	
+	
+	public boolean chainingFunction(K key, V value) {
 
 		int indice = fuctionHash(key);
+		Node<K,V> node= new Node<K, V>(key, value);
+		if(cList[indice]==null) {
+			cList[indice]= node;
+		}else {
+			addNode(node, cList[indice]);
+		}
 
-		Node<K, V> tab[] = cList;
-
-		return false;
+		return true;
 	}
 
 

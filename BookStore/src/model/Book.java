@@ -16,6 +16,7 @@ public class Book {
 		this.price = price;
 		setSoldOut(false);
 	}
+
 	public String getTitle() {
 		return title;
 	}
