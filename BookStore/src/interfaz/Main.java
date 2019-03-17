@@ -28,6 +28,8 @@ public class Main extends Application {
 			scenePrincipal.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scenePrincipal);
 			primaryStage.show();
+			//minusculo
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
