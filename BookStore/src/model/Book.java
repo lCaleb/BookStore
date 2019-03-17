@@ -1,6 +1,6 @@
 package model;
 
-public class Book {
+public class Book implements Comparable<Book> {
 
 	
 	private String title;
@@ -8,6 +8,9 @@ public class Book {
 	private double price;
 	private int quantity;
 	private boolean soldOut; 
+	
+	private char bookShelve;
+	
 	
 	public Book(String title, String iSBN, double price) {
 		super();
@@ -46,6 +49,26 @@ public class Book {
 	}
 	public void setSoldOut(boolean soldOut) {
 		this.soldOut = soldOut;
+	}
+
+	@Override
+	public int compareTo(Book b) {
+        if (bookShelve < b.getBookShelve()) {
+            return 1;
+        } else if (bookShelve > b.getBookShelve()) {
+            return -1;
+        } else {
+            return 0;
+        }
+
+	}
+
+	public char getBookShelve() {
+		return bookShelve;
+	}
+
+	public void setBookShelve(char bookShelve) {
+		this.bookShelve = bookShelve;
 	}
 	
 	

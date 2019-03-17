@@ -1,5 +1,8 @@
 package model;
 
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 import MCLibrary.CMHashTable;
 import MCLibrary.MList;
 import MCLibrary.MQueue;
@@ -19,17 +22,27 @@ public class BookStore {
 	}
 	
 	
-	public Stack<Book> locationsList(MList<String> isbnList){
+	public PriorityQueue<Book> locationsList(MList<String> isbnList){
 		
-		Stack<Book> locationList= new Stack<Book>();
+		//Stack<Book> locationList= new Stack<Book>();
+		PriorityQueue<Book> locations = new PriorityQueue<Book>();
 		
 		while (!isbnList.isEmpty()) {
-			locationList.push(catalog.chainingSearch(isbnList.poll()).value);
+			locations.offer(catalog.chainingSearch(isbnList.poll()).value);
 		}
 		
-		return locationList;	
+		return locations;	
 	}
 	
+	public Stack<Book> collectBooks(PriorityQueue<Book> collect) {
+		Stack<Book> collected= new Stack<Book>();	
+		
+		while (!collect.isEmpty()) {
+			collected.push(collect.poll());
+		}
+				
+		return collected;
+	}
 	
 	
 	public void addBook(Book book) {

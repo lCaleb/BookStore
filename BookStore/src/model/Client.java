@@ -1,12 +1,14 @@
 package model;
 
+import java.util.PriorityQueue;
+
 import MCLibrary.MList;
 
 public class Client {
 
 	private String id;
 	private MList<String> isbnList;
-	private MList<Book> bookList;
+	private PriorityQueue<Book> bookList;
 	private int minutes;
 	
 	public Client(String id) {
