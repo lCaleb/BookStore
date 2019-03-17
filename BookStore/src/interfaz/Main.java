@@ -23,10 +23,24 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Inicio.fxml"));
 			AnchorPane root = (AnchorPane) loader.load();
 			InicioController inicioController = loader.getController();
+		
+			
+			
+			
+			
+			
+			inicioController.enlazarMain(this, bookStore);
+			
+			
+			
+			
+			
+			
+			
 			
 			scenePrincipal = new Scene(root);
 			this.primaryStage = primaryStage;
-			scenePrincipal.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scenePrincipal.getStylesheets().add(getClass().getResource("application.css").toExternalForm());	
 			primaryStage.setScene(scenePrincipal);
 			primaryStage.show();
 			//minusculo
@@ -44,9 +58,9 @@ try {
 			BusquedaController busquedaController = loader.getController();
 			busquedaController.enlazarMain(this, bookStore);
 			sceneBusqueda = new Scene(root);
-			
+			System.out.println("jsf");
 			scenePrincipal.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scenePrincipal);
+			primaryStage.setScene(sceneBusqueda);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

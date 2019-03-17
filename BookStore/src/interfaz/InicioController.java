@@ -41,10 +41,12 @@ public class InicioController {
 		botonInicio.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent e) {
+				System.out.println("ddg");
 				for (int i = 0; i < Integer.parseInt(numCajeros.getText()); i++) {
 					Seller  seller = new Seller(i+1);
 					bookStore.addSeller(seller);
 				}
+				System.out.println("ddffg");
 				for (int i = 0; i < Integer.parseInt(numClientes.getText()); i++) {
 					int aleator=(int) (Math.random()*20000)+1000;
 					Client client = new Client(aleator+"");
