@@ -8,4 +8,5 @@ public interface MQueue<E> {
 	 public int size();
 	 public boolean isEmpty();
 	 public boolean contains(E e);
+	 public E get(int i);
 }

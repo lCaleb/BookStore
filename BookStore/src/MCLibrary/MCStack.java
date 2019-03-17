@@ -2,12 +2,13 @@ package MCLibrary;
 
 
 
-public class Stack<T> implements IStack<T> {
+public class MCStack<T> implements IStack<T> {
 
 	private MQueue<T> cola;
 	private MQueue<T> cola2;
+	private int size;
 
-	public Stack() {
+	public MCStack() {
 
 		cola = new MList<T>();
 		cola2 = new MList<T>();
@@ -30,7 +31,15 @@ public class Stack<T> implements IStack<T> {
 			cola2 = temporal;
 
 		}
+		size+=1;
+	}
 
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
 	}
 
 	@Override
