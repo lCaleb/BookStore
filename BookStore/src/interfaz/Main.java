@@ -46,6 +46,7 @@ try {
 			busquedaController.enlazarMain(this, bookStore);
 			sceneBusqueda = new Scene(root);
 			
+			
 			sceneBusqueda.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(sceneBusqueda);
 			primaryStage.show();
