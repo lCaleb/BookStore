@@ -62,6 +62,7 @@ try {
 
 			primaryStage.setScene(sceneBusqueda);
 			primaryStage.show();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
