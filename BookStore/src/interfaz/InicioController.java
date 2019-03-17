@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 
 import javafx.scene.input.MouseEvent;
 import model.BookStore;
+import model.Client;
+import model.Seller;
 
 public class InicioController {
 
@@ -39,7 +41,16 @@ public class InicioController {
 		botonInicio.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent e) {
-
+				for (int i = 0; i < Integer.parseInt(numCajeros.getText()); i++) {
+					Seller  seller = new Seller(i+1);
+					bookStore.addSeller(seller);
+				}
+				for (int i = 0; i < Integer.parseInt(numClientes.getText()); i++) {
+					int aleator=(int) (Math.random()*20000)+1000;
+					Client client = new Client(aleator+"");
+					bookStore.addClient(client);
+				}
+				main.cargarBusquedaController();
 			}
 
 		});

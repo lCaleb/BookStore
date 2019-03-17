@@ -18,6 +18,7 @@ public class Main extends Application {
 		
 	@Override
 		public void start(Stage primaryStage) {
+		bookStore= new BookStore();
 		try {
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Inicio.fxml"));
