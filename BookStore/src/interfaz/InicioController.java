@@ -52,6 +52,8 @@ public class InicioController {
 					Client client = new Client(aleator+"");
 					bookStore.addClient(client);
 				}
+				
+				
 				main.cargarBusquedaController();
 			}
 

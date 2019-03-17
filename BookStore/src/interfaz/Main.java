@@ -14,6 +14,7 @@ public class Main extends Application {
 	private Stage primaryStage;
 	private Scene scenePrincipal;
 	private Scene sceneBusqueda;
+	private Scene sceneInformation;
 		
 	@Override
 		public void start(Stage primaryStage) {
@@ -58,8 +59,13 @@ try {
 			BusquedaController busquedaController = loader.getController();
 			busquedaController.enlazarMain(this, bookStore);
 			sceneBusqueda = new Scene(root);
+<<<<<<< HEAD
 			System.out.println("jsf");
 			scenePrincipal.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+=======
+			
+			sceneBusqueda.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+>>>>>>> branch 'master' of https://github.com/lCaleb/BookStore.git
 			primaryStage.setScene(sceneBusqueda);
 			primaryStage.show();
 		} catch(Exception e) {
@@ -67,6 +73,23 @@ try {
 		}
 		
 	}
+	public void cargarInformationController() {
+		try {
+					
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("Information.fxml"));
+					AnchorPane root = (AnchorPane) loader.load();
+					InformationController informationControlleror = loader.getController();
+					informationControlleror.enlazarMain(this, bookStore);
+					sceneInformation = new Scene(root);
+					
+					sceneInformation.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+					primaryStage.setScene(sceneInformation);
+					primaryStage.show();
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+				
+			}
 	
 	
 	public static void main(String[] args) {

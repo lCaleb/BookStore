@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -54,5 +55,10 @@
             <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="316.0" layoutY="545.0" mnemonicParsing="false" style="-fx-background-radius: 35;" text="Siguiente">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
