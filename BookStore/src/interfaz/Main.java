@@ -59,13 +59,7 @@ try {
 			BusquedaController busquedaController = loader.getController();
 			busquedaController.enlazarMain(this, bookStore);
 			sceneBusqueda = new Scene(root);
-<<<<<<< HEAD
-			System.out.println("jsf");
-			scenePrincipal.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-=======
-			
-			sceneBusqueda.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
->>>>>>> branch 'master' of https://github.com/lCaleb/BookStore.git
+
 			primaryStage.setScene(sceneBusqueda);
 			primaryStage.show();
 		} catch(Exception e) {

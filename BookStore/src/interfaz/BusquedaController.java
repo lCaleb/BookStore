@@ -17,6 +17,8 @@ public class BusquedaController {
 	@FXML private Button siguiente;
 	
 	
+	
+	
 	public void enlazarMain(Main main, BookStore bookStore) {
 		this.bookStore=bookStore;
 		this.main=main;
