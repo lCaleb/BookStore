@@ -85,6 +85,14 @@ public class MList<E> implements MQueue<E> {
 	
 		return true;
 	}
+	@Override
+	public E get(int i) {
+		E element= cabeza.elemento;
+		for (int j = 0; j < i; j++) {
+			element= cabeza.siguiente.elemento;
+		}
+		return element;
+	}
 
 	@Override
 	public E poll() {
